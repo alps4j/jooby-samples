@@ -1,3 +1,5 @@
+![Jooby](https://raw.githubusercontent.com/trydent-io/jooby-samples/master/logo_jooby.png)
+
 # Jooby Samples
 Simple samples based on [Jooby](http://jooby.org) a scalable, fast and modular micro web framework for Java. 
 
