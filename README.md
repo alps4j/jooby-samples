@@ -8,7 +8,7 @@ Since **Jooby** is a pretty new thing in the Java-ecosystem, I decided to contri
 The modules included in Jooby are a lot and some of them hide some interesting gems (did you check the Thread Model API? so cool!), so I want to try to show its potential.
 
 ## First Step
-The first step of the project is to provide random samples by keeping an eye on the pattern shown in the official [Jooby-Modules](http://jooby.org/modules) page.
+The first step of the project is to provide random samples keeping an eye on the pattern shown in the official [Jooby-Modules](http://jooby.org/modules) page.
 There is no road-map for now, so there is no priority on which module will be completed first, hence be patient.
 However if I'm able to get the right rhythm I could try to be less generic. This will be a checklist, so drop by whenever you need to check the progress:
 
