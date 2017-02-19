@@ -10,6 +10,7 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>jooby-sample-script-api</module>
+		<module>jooby-sample-script-api-undertow</module>
 	</modules>
 
 	<properties>

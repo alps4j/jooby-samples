@@ -30,10 +30,10 @@ However if I'm able to get the right rhythm I might try to be less sketchy. This
 * **Security**
 
 ### Addendum
-Since Jooby provides different embedded-web-server integrations such as [Undertow](http://undertow.io), [Jetty](http://www.eclipse.org/jetty/) and [Netty](http://netty.io/), in order to simplify the job here, by default all the provided samples are going to use Jetty.
-Nothing really changes using one web-server against another, thanks to Jooby it is possible to replace the web-server integration dependency with your favourite.
+Since Jooby provides different embedded-web-server integrations such as [Undertow](http://undertow.io), [Jetty](http://www.eclipse.org/jetty/) and [Netty](http://netty.io/), in order to simplify the job, by default all the provided samples are going to use Jetty.
+Nothing really changes using one web-server for another, with Jooby is possible to replace the web-server integration dependency with your favourite transparently.
 
-*Jetty has been chosen just following the trend shown on [Google Trends](https://trends.google.com/trends/explore?cat=732&q=undertow,jetty,netty) nothing more nothing less :)*
+*Jetty has been chosen just following the trend shown on [Google Trends](https://trends.google.com/trends/explore?cat=732&q=undertow,jetty,netty) no biased decision.*
 
 ## Languages and Build Systems
 For now just:
