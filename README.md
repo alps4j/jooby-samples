@@ -1,5 +1,7 @@
-![Jooby](https://raw.githubusercontent.com/trydent-io/jooby-samples/master/logo_jooby.png)
+![Jooby][jooby img]
+
 [![][travis img]][travis]
+[![][coverage img]][coverage]
 [![][license img]][license]
 
 # Jooby Samples
@@ -45,3 +47,14 @@ Then (I don't know when, sorry):
 
 In a dream of mine:
 * **Ceylon 1.3.x+**
+
+[jooby img]:https://raw.githubusercontent.com/trydent-io/jooby-samples/master/logo_jooby.png
+
+[travis]:https://travis-ci.org/trydent-io/jooby-samples
+[travis img]:https://travis-ci.org/trydent-io/jooby-samples.svg?branch=master
+
+[coverage]:https://coveralls.io/github/trydent-io/jooby-samples?branch=master
+[coverage img]:https://coveralls.io/repos/github/trydent-io/jooby-samples/badge.svg?branch=master
+
+[license]:LICENSE-2.0.txt
+[license img]:https://img.shields.io/badge/License-Apache%202-blue.svg
