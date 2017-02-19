@@ -20,31 +20,31 @@ import org.jooby.test.MockRouter;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class ScriptApiMainTest {
+public class ScriptApiUndertowMainTest {
 	@Test
 	public void getMethod() throws Throwable {
-		final Object get = new MockRouter(new ScriptApiMain()).get("/");
+		final Object get = new MockRouter(new ScriptApiUndertowMain()).get("/");
 
 		Assert.assertEquals("GET", get);
 	}
 
 	@Test
 	public void postMethod() throws Throwable {
-		final Object post = new MockRouter(new ScriptApiMain()).post("/");
+		final Object post = new MockRouter(new ScriptApiUndertowMain()).post("/");
 
 		Assert.assertEquals("POST", post);
 	}
 
 	@Test
 	public void putMethod() throws Throwable {
-		final Object put = new MockRouter(new ScriptApiMain()).put("/");
+		final Object put = new MockRouter(new ScriptApiUndertowMain()).put("/");
 
 		Assert.assertEquals("PUT", put);
 	}
 
 	@Test
 	public void deleteMethod() throws Throwable {
-		final Object delete = new MockRouter(new ScriptApiMain()).delete("/");
+		final Object delete = new MockRouter(new ScriptApiUndertowMain()).delete("/");
 
 		Assert.assertEquals("DELETE", delete);
 	}

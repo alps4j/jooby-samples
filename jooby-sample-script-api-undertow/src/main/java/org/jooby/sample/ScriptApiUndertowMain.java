@@ -25,8 +25,8 @@ import static io.undertow.util.Methods.GET;
 import static io.undertow.util.Methods.POST;
 import static io.undertow.util.Methods.PUT;
 
-public final class ScriptApiMain extends Jooby {
-	private static final Logger log = LoggerFactory.getLogger(ScriptApiMain.class);
+public final class ScriptApiUndertowMain extends Jooby {
+	private static final Logger log = LoggerFactory.getLogger(ScriptApiUndertowMain.class);
 
 	private static final String REQUEST = "%s has been requested!";
 
@@ -51,6 +51,6 @@ public final class ScriptApiMain extends Jooby {
 	}
 
 	public static void main(String... args) {
-		run(ScriptApiMain::new, args);
+		run(ScriptApiUndertowMain::new, args);
 	}
 }
