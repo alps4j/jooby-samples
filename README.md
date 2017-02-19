@@ -1,4 +1,6 @@
 ![Jooby](https://raw.githubusercontent.com/trydent-io/jooby-samples/master/logo_jooby.png)
+[![][travis img]][travis]
+[![][license img]][license]
 
 # Jooby Samples
 Simple samples based on [Jooby](http://jooby.org) a scalable, fast and modular micro web framework for Java.
@@ -13,6 +15,7 @@ There is no road-map for now, so there is no priority on which module will be co
 However if I'm able to get the right rhythm I might try to be less sketchy. This will be a checklist, so drop by whenever you need to check the progress:
 
 * **Route Spec**
+	* Script API sample
 * **Data: Jdbc**
 * **Data: NoSQL**
 * **Assets: CSS Processors**
@@ -23,6 +26,12 @@ However if I'm able to get the right rhythm I might try to be less sketchy. This
 * **Http Session**
 * **Caches**
 * **Security**
+
+### Addendum
+Since Jooby provides different embedded-web-server integrations such as [Undertow](http://undertow.io), [Jetty](http://www.eclipse.org/jetty/) and [Netty](http://netty.io/), in order to simplify the job here, by default all the provided samples are going to use Jetty.
+Nothing really changes using one web-server against another, thanks to Jooby it is possible to replace the web-server integration dependency with your favourite.
+
+*Jetty has been chosen just following the trend shown on [Google Trends](https://trends.google.com/trends/explore?cat=732&q=undertow,jetty,netty) nothing more nothing less :)*
 
 ## Languages and Build Systems
 For now just:
