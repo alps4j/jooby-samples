@@ -20,10 +20,7 @@ import org.jooby.Jooby;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.eclipse.jetty.http.HttpMethod.DELETE;
-import static org.eclipse.jetty.http.HttpMethod.GET;
-import static org.eclipse.jetty.http.HttpMethod.POST;
-import static org.eclipse.jetty.http.HttpMethod.PUT;
+import static org.eclipse.jetty.http.HttpMethod.*;
 
 public final class ScriptApiMain extends Jooby {
 	private static final Logger log = LoggerFactory.getLogger(ScriptApiMain.class);

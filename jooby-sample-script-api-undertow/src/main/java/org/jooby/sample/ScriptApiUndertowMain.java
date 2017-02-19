@@ -20,10 +20,7 @@ import org.jooby.Jooby;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static io.undertow.util.Methods.DELETE;
-import static io.undertow.util.Methods.GET;
-import static io.undertow.util.Methods.POST;
-import static io.undertow.util.Methods.PUT;
+import static io.undertow.util.Methods.*;
 
 public final class ScriptApiUndertowMain extends Jooby {
 	private static final Logger log = LoggerFactory.getLogger(ScriptApiUndertowMain.class);
