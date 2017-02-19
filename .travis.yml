@@ -4,4 +4,8 @@ jdk:
 install:
   - sh -c 'mvn install -DskipTests=true'
 script:
-  - sh -c 'mvn test'
+  - mvn -Dlogback.configurationFile=logback.xml -Dcoverage.port=random -Dcoverage.securePort=random clean package coveralls:report -P coverage
+
+branches:
+  only:
+    - master
