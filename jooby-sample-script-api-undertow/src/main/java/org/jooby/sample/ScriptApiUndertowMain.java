@@ -23,31 +23,31 @@ import org.slf4j.LoggerFactory;
 import static io.undertow.util.Methods.*;
 
 public final class ScriptApiUndertowMain extends Jooby {
-	private static final Logger log = LoggerFactory.getLogger(ScriptApiUndertowMain.class);
+  private static final Logger log = LoggerFactory.getLogger(ScriptApiUndertowMain.class);
 
-	private static final String REQUEST = "%s has been requested!";
+  private static final String REQUEST = "%s has been requested!";
 
-	{
-		use("/")
-			.get(() -> {
-				log.info(String.format(REQUEST, GET.toString()));
-				return GET.toString();
-			})
-			.post(() -> {
-				log.info(String.format(REQUEST, POST.toString()));
-				return POST.toString();
-			})
-			.put(() -> {
-				log.info(String.format(REQUEST, PUT.toString()));
-				return PUT.toString();
-			})
-			.delete(() -> {
-				log.info(String.format(REQUEST, DELETE.toString()));
-				return DELETE.toString();
-			});
-	}
+  {
+    use("/")
+      .get(() -> {
+        log.info(String.format(REQUEST, GET.toString()));
+        return GET.toString();
+      })
+      .post(() -> {
+        log.info(String.format(REQUEST, POST.toString()));
+        return POST.toString();
+      })
+      .put(() -> {
+        log.info(String.format(REQUEST, PUT.toString()));
+        return PUT.toString();
+      })
+      .delete(() -> {
+        log.info(String.format(REQUEST, DELETE.toString()));
+        return DELETE.toString();
+      });
+  }
 
-	public static void main(String... args) {
-		run(ScriptApiUndertowMain::new, args);
-	}
+  public static void main(String... args) {
+    run(ScriptApiUndertowMain::new, args);
+  }
 }

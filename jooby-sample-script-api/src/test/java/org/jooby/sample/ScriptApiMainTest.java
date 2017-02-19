@@ -21,31 +21,31 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class ScriptApiMainTest {
-	@Test
-	public void getMethod() throws Throwable {
-		final Object get = new MockRouter(new ScriptApiMain()).get("/");
+  @Test
+  public void getMethod() throws Throwable {
+    final Object get = new MockRouter(new ScriptApiMain()).get("/");
 
-		Assert.assertEquals("GET", get);
-	}
+    Assert.assertEquals("GET", get);
+  }
 
-	@Test
-	public void postMethod() throws Throwable {
-		final Object post = new MockRouter(new ScriptApiMain()).post("/");
+  @Test
+  public void postMethod() throws Throwable {
+    final Object post = new MockRouter(new ScriptApiMain()).post("/");
 
-		Assert.assertEquals("POST", post);
-	}
+    Assert.assertEquals("POST", post);
+  }
 
-	@Test
-	public void putMethod() throws Throwable {
-		final Object put = new MockRouter(new ScriptApiMain()).put("/");
+  @Test
+  public void putMethod() throws Throwable {
+    final Object put = new MockRouter(new ScriptApiMain()).put("/");
 
-		Assert.assertEquals("PUT", put);
-	}
+    Assert.assertEquals("PUT", put);
+  }
 
-	@Test
-	public void deleteMethod() throws Throwable {
-		final Object delete = new MockRouter(new ScriptApiMain()).delete("/");
+  @Test
+  public void deleteMethod() throws Throwable {
+    final Object delete = new MockRouter(new ScriptApiMain()).delete("/");
 
-		Assert.assertEquals("DELETE", delete);
-	}
+    Assert.assertEquals("DELETE", delete);
+  }
 }

@@ -23,31 +23,31 @@ import org.slf4j.LoggerFactory;
 import static org.eclipse.jetty.http.HttpMethod.*;
 
 public final class ScriptApiMain extends Jooby {
-	private static final Logger log = LoggerFactory.getLogger(ScriptApiMain.class);
+  private static final Logger log = LoggerFactory.getLogger(ScriptApiMain.class);
 
-	private static final String REQUEST = "%s has been requested!";
+  private static final String REQUEST = "%s has been requested!";
 
-	{
-		use("/")
-			.get(() -> {
-				log.info(String.format(REQUEST, GET.asString()));
-				return GET.asString();
-			})
-			.post(() -> {
-				log.info(String.format(REQUEST, POST.asString()));
-				return POST.asString();
-			})
-			.put(() -> {
-				log.info(String.format(REQUEST, PUT.asString()));
-				return PUT.asString();
-			})
-			.delete(() -> {
-				log.info(String.format(REQUEST, DELETE.asString()));
-				return DELETE.asString();
-			});
-	}
+  {
+    use("/")
+      .get(() -> {
+        log.info(String.format(REQUEST, GET.asString()));
+        return GET.asString();
+      })
+      .post(() -> {
+        log.info(String.format(REQUEST, POST.asString()));
+        return POST.asString();
+      })
+      .put(() -> {
+        log.info(String.format(REQUEST, PUT.asString()));
+        return PUT.asString();
+      })
+      .delete(() -> {
+        log.info(String.format(REQUEST, DELETE.asString()));
+        return DELETE.asString();
+      });
+  }
 
-	public static void main(String... args) {
-		run(ScriptApiMain::new, args);
-	}
+  public static void main(String... args) {
+    run(ScriptApiMain::new, args);
+  }
 }
