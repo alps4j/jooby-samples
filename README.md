@@ -2,6 +2,7 @@
 
 [![][travis img]][travis]
 [![][coverage img]][coverage]
+[![][gitter img]][gitter]
 [![][license img]][license]
 
 # Jooby Samples
@@ -55,6 +56,9 @@ In a dream of mine:
 
 [coverage]:https://coveralls.io/github/trydent-io/jooby-samples?branch=master
 [coverage img]:https://coveralls.io/repos/github/trydent-io/jooby-samples/badge.svg?branch=master
+
+[gitter]:https://gitter.im/jooby-project/jooby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+[gitter img]:https://badges.gitter.im/jooby-project/jooby.svg
 
 [license]:LICENSE-2.0.txt
 [license img]:https://img.shields.io/badge/License-Apache%202-blue.svg
