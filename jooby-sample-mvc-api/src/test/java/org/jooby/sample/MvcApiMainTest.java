@@ -16,36 +16,48 @@
 
 package org.jooby.sample;
 
-import org.jooby.test.MockRouter;
-import org.junit.Assert;
+import org.jooby.test.JoobyRule;
+import org.junit.ClassRule;
 import org.junit.Test;
 
-public class ScriptApiUndertowMainTest {
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.CoreMatchers.equalTo;
+
+public class MvcApiMainTest {
+  private static final String PATH = "/mvc";
+
+  @ClassRule
+  public static JoobyRule bootstrap = new JoobyRule(new MvcApiMain());
+
   @Test
   public void getMethod() throws Throwable {
-    final Object get = new MockRouter(new ScriptApiUndertowMain()).get("/");
-
-    Assert.assertEquals("GET", get);
+    get(PATH)
+      .then()
+      .assertThat()
+      .body(equalTo("GET"));
   }
 
   @Test
   public void postMethod() throws Throwable {
-    final Object post = new MockRouter(new ScriptApiUndertowMain()).post("/");
-
-    Assert.assertEquals("POST", post);
+    post(PATH)
+      .then()
+      .assertThat()
+      .body(equalTo("POST"));
   }
 
   @Test
   public void putMethod() throws Throwable {
-    final Object put = new MockRouter(new ScriptApiUndertowMain()).put("/");
-
-    Assert.assertEquals("PUT", put);
+    put(PATH)
+      .then()
+      .assertThat()
+      .body(equalTo("PUT"));
   }
 
   @Test
   public void deleteMethod() throws Throwable {
-    final Object delete = new MockRouter(new ScriptApiUndertowMain()).delete("/");
-
-    Assert.assertEquals("DELETE", delete);
+    delete(PATH)
+      .then()
+      .assertThat()
+      .body(equalTo("DELETE"));
   }
 }
