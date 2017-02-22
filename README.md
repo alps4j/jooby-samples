@@ -18,7 +18,8 @@ There is no road-map for now, so there is no priority on which module will be co
 However if I'm able to get the right rhythm I might try to be less sketchy. This will be a checklist, so drop by whenever you need to check the progress:
 
 * **Route Spec**
-	* Script API sample: Jetty, Undertow, Netty
+	* Script API samples: Jetty, Undertow, Netty
+	* MVC API sample
 * **Data: Jdbc**
 * **Data: NoSQL**
 * **Assets: CSS Processors**
