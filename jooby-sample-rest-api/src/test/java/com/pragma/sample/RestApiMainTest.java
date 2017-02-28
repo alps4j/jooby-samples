@@ -58,4 +58,12 @@ public class RestApiMainTest {
       .assertThat()
       .body(instanceOf(Person.class));
   }
+
+  @Test
+  public void mvcPost() {
+    post(MVC_PATH, "Obi-Wan", "Kenobi", LocalDate.of(1971, 3, 31))
+      .then()
+      .assertThat()
+      .body(instanceOf(Person.class));
+  }
 }
