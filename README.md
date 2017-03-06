@@ -20,6 +20,7 @@ However if I'm able to get the right rhythm I might try to be less sketchy. This
 * **Route Spec**
 	* Script API samples: Jetty, Undertow, Netty
 	* MVC API sample
+	* Rest API sample: Gson
 * **Data: Jdbc**
 * **Data: NoSQL**
 * **Assets: CSS Processors**
