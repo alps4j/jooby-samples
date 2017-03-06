@@ -17,22 +17,29 @@
 package com.pragma.sample;
 
 import com.pragma.sample.entity.Person;
+import com.pragma.sample.json.LocalDateAsJson;
 import com.pragma.sample.mvc.RestController;
 import org.jooby.Jooby;
+import org.jooby.json.Gzon;
 
 import java.time.LocalDate;
 
 public final class RestApiMain extends Jooby {
   {
+    use(new Gzon().doWith((builder, config) ->
+      builder.registerTypeAdapter(LocalDate.class, LocalDateAsJson.of("yyyy-MM-dd"))
+    ));
+
     use(RestController.class);
+
     use("/script/rest")
       .get(request -> Person.LUKE)
       .post(request -> new Person(
         request.param("firstName").value(),
         request.param("lastName").value(),
-        request.param("birthDate").to(LocalDate.class)
+        request.param("birthDate").toOptional(LocalDate.class).orElse(LocalDate.now())
       ))
-      .consumes("application/json")
+      .consumes("application/x-www-form-urlencoded")
       .produces("application/json");
   }
 

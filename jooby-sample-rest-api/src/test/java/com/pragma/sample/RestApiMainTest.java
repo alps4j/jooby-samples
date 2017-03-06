@@ -16,17 +16,13 @@
 
 package com.pragma.sample;
 
-import com.pragma.sample.entity.Person;
 import org.jooby.test.JoobyRule;
 import org.junit.ClassRule;
 import org.junit.Test;
 
-import java.time.LocalDate;
-
 import static io.restassured.RestAssured.get;
-import static io.restassured.RestAssured.post;
-import static org.hamcrest.CoreMatchers.instanceOf;
-import static org.hamcrest.CoreMatchers.is;
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.equalTo;
 
 public class RestApiMainTest {
   private static final String MVC_PATH = "/mvc/rest";
@@ -40,15 +36,19 @@ public class RestApiMainTest {
     get(SCRIPT_PATH)
       .then()
       .assertThat()
-      .body(is(Person.LUKE));
+      .body("firstName", equalTo("Luke"));
   }
 
   @Test
   public void scriptPost() {
-    post(SCRIPT_PATH, "Obi-Wan", "Kenobi", LocalDate.of(1971, 3, 31))
+    given()
+      .queryParams(
+        "firstName", "Obi-Wan",
+        "lastName", "Kenobi")
+      .post(SCRIPT_PATH)
       .then()
       .assertThat()
-      .body(is(Person.LUKE));
+      .body("firstName", equalTo("Obi-Wan"));
   }
 
   @Test
@@ -56,14 +56,18 @@ public class RestApiMainTest {
     get(MVC_PATH)
       .then()
       .assertThat()
-      .body(instanceOf(Person.class));
+      .body("firstName", equalTo("Luke"));
   }
 
   @Test
   public void mvcPost() {
-    post(MVC_PATH, "Obi-Wan", "Kenobi", LocalDate.of(1971, 3, 31))
+    given()
+      .queryParams(
+        "firstName", "Leia",
+        "lastName", "Organa")
+      .post(MVC_PATH)
       .then()
       .assertThat()
-      .body(instanceOf(Person.class));
+      .body("firstName", equalTo("Leia"));
   }
 }

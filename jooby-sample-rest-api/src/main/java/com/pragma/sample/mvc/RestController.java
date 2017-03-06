@@ -17,23 +17,21 @@
 package com.pragma.sample.mvc;
 
 import com.pragma.sample.entity.Person;
-import org.jooby.mvc.Consumes;
-import org.jooby.mvc.GET;
-import org.jooby.mvc.POST;
-import org.jooby.mvc.Path;
-import org.jooby.mvc.Produces;
+import org.jooby.mvc.*;
 
 import java.time.LocalDate;
+import java.util.Optional;
 
 @Path("/mvc/rest")
-@Consumes("application/json")
+@Consumes("application/x-www-form-urlencoded")
 @Produces("application/json")
 public final class RestController {
   @GET
   public Person get() { return Person.LUKE; }
 
   @POST
-  public Person post(String firstName, String lastName, LocalDate birthDate) {
-    return new Person(firstName, lastName, birthDate);
+  @SuppressWarnings("OptionalUsedAsFieldOrParameterType")
+  public Person post(String firstName, String lastName, Optional<LocalDate> birthDate) {
+    return new Person(firstName, lastName, birthDate.orElse(LocalDate.now()));
   }
 }
