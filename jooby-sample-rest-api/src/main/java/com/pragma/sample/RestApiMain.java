@@ -27,7 +27,7 @@ import java.time.LocalDate;
 public final class RestApiMain extends Jooby {
   {
     use(new Gzon().doWith((builder, config) ->
-      builder.registerTypeAdapter(LocalDate.class, LocalDateAsJson.of("yyyy-MM-dd"))
+      builder.registerTypeAdapter(LocalDate.class, LocalDateAsJson.withDefault())
     ));
 
     use(RestController.class);

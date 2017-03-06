@@ -16,6 +16,8 @@
 
 package com.pragma.sample.entity;
 
+import net.sourceforge.cobertura.interaction.annotations.api.metrics.CoberturaIgnored;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -32,6 +34,7 @@ public final class Person {
     this.birthDate = birthDate;
   }
 
+  @CoberturaIgnored
   public String getFirstName() {
     return firstName;
   }
@@ -40,6 +43,7 @@ public final class Person {
     this.firstName = firstName;
   }
 
+  @CoberturaIgnored
   public String getLastName() {
     return lastName;
   }
@@ -48,6 +52,7 @@ public final class Person {
     this.lastName = lastName;
   }
 
+  @CoberturaIgnored
   public LocalDate getBirthDate() {
     return birthDate;
   }
