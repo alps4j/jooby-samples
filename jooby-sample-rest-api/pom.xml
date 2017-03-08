@@ -29,10 +29,5 @@
       <groupId>io.rest-assured</groupId>
       <artifactId>rest-assured</artifactId>
     </dependency>
-    <dependency>
-      <groupId>net.sourceforge.cobertura.interaction.annotations.api</groupId>
-      <artifactId>cobertura-annotations-api</artifactId>
-      <version>2.1.1</version>
-    </dependency>
   </dependencies>
 </project>

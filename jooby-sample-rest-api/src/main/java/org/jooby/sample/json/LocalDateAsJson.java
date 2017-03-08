@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.pragma.sample.json;
+package org.jooby.sample.json;
 
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
@@ -41,6 +41,7 @@ public final class LocalDateAsJson implements JsonSerializer<LocalDate>, JsonDes
     return of(PATTERN);
   }
 
+  @SuppressWarnings("WeakerAccess")
   public static LocalDateAsJson of(final String pattern) {
     return new LocalDateAsJson(DateTimeFormatter.ofPattern(pattern));
   }

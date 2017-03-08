@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.pragma.sample.mvc;
+package org.jooby.sample.mvc;
 
-import com.pragma.sample.entity.Person;
+import org.jooby.sample.entity.Person;
 import org.jooby.mvc.*;
 
 import java.time.LocalDate;

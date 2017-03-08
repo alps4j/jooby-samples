@@ -68,6 +68,20 @@
             <groupId>org.eluder.coveralls</groupId>
             <artifactId>coveralls-maven-plugin</artifactId>
             <version>4.3.0</version>
+            <configuration>
+              <instrumentation>
+<!--
+                <ignores>
+                  <ignore>org.jooby.sample.*</ignore>
+                </ignores>
+-->
+                <excludes>
+                  <exclude>org/jooby/sample/entity/*.class</exclude>
+                  <exclude>org/jooby/sample/**/*Test.class</exclude>
+                  <exclude>org/jooby/sample/*Main.class</exclude>
+                </excludes>
+              </instrumentation>
+            </configuration>
           </plugin>
         </plugins>
       </build>

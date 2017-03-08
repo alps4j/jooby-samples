@@ -14,9 +14,7 @@
  * limitations under the License.
  */
 
-package com.pragma.sample.entity;
-
-import net.sourceforge.cobertura.interaction.annotations.api.metrics.CoberturaIgnored;
+package org.jooby.sample.entity;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -34,32 +32,26 @@ public final class Person {
     this.birthDate = birthDate;
   }
 
-  @CoberturaIgnored
   public String getFirstName() {
     return firstName;
   }
 
-  @CoberturaIgnored
   public void setFirstName(String firstName) {
     this.firstName = firstName;
   }
 
-  @CoberturaIgnored
   public String getLastName() {
     return lastName;
   }
 
-  @CoberturaIgnored
   public void setLastName(String lastName) {
     this.lastName = lastName;
   }
 
-  @CoberturaIgnored
   public LocalDate getBirthDate() {
     return birthDate;
   }
 
-  @CoberturaIgnored
   public void setBirthDate(LocalDate birthDate) {
     this.birthDate = birthDate;
   }

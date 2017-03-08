@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.pragma.sample;
+package org.jooby.sample;
 
-import com.pragma.sample.entity.Person;
-import com.pragma.sample.json.LocalDateAsJson;
-import com.pragma.sample.mvc.RestController;
+import org.jooby.sample.entity.Person;
+import org.jooby.sample.json.LocalDateAsJson;
+import org.jooby.sample.mvc.RestController;
 import org.jooby.Jooby;
 import org.jooby.json.Gzon;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.pragma.sample;
+package org.jooby.sample;
 
 import org.jooby.test.JoobyRule;
 import org.junit.ClassRule;
