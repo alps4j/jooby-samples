@@ -20,7 +20,7 @@ However if I'm able to get the right rhythm I might try to be less sketchy. This
 * **Route Spec**
 	* Script API samples: Jetty, Undertow, Netty
 	* MVC API sample
-	* Rest API sample: Gson
+	* Rest API sample: Gson, Jackson
 * **Data: Jdbc**
 * **Data: NoSQL**
 * **Assets: CSS Processors**
@@ -44,7 +44,7 @@ For now just:
 * **Apache Maven 3.3.9**
 
 Then (I don't know when, sorry):
-* **Gradle 2.x+**
+* **Gradle 3.x+**
 * **Kotlin 1.x+**
 * **Javascript**
 
