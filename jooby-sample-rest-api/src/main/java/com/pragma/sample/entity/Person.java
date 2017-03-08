@@ -39,6 +39,7 @@ public final class Person {
     return firstName;
   }
 
+  @CoberturaIgnored
   public void setFirstName(String firstName) {
     this.firstName = firstName;
   }
@@ -48,6 +49,7 @@ public final class Person {
     return lastName;
   }
 
+  @CoberturaIgnored
   public void setLastName(String lastName) {
     this.lastName = lastName;
   }
@@ -57,6 +59,7 @@ public final class Person {
     return birthDate;
   }
 
+  @CoberturaIgnored
   public void setBirthDate(LocalDate birthDate) {
     this.birthDate = birthDate;
   }
