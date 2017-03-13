@@ -15,6 +15,7 @@
     <module>jooby-sample-mvc-api</module>
     <module>jooby-sample-rest-api</module>
     <module>jooby-sample-rest-api-jackson</module>
+    <module>jooby-sample-upload-download</module>
   </modules>
 
   <properties>
