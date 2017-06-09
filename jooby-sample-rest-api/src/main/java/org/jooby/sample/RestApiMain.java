@@ -16,13 +16,16 @@
 
 package org.jooby.sample;
 
+import org.jooby.Jooby;
+import org.jooby.json.Gzon;
 import org.jooby.sample.entity.Person;
 import org.jooby.sample.json.LocalDateAsJson;
 import org.jooby.sample.mvc.RestController;
-import org.jooby.Jooby;
-import org.jooby.json.Gzon;
 
 import java.time.LocalDate;
+
+import static org.jooby.MediaType.form;
+import static org.jooby.MediaType.json;
 
 public final class RestApiMain extends Jooby {
   {
@@ -39,8 +42,9 @@ public final class RestApiMain extends Jooby {
         request.param("lastName").value(),
         request.param("birthDate").toOptional(LocalDate.class).orElse(LocalDate.now())
       ))
-      .consumes("application/x-www-form-urlencoded")
-      .produces("application/json");
+//      .consumes("application/x-www-form-urlencoded")
+      .consumes(form)
+      .produces(json);
   }
 
   public static void main(String... args) {

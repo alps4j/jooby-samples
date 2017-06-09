@@ -16,6 +16,8 @@ public final class UploadDownloadSampleMain extends Jooby {
   private static final String JOOBY_LOGO = "logo_jooby.png";
 
   {
+    assets("/", "index.html");
+
     use(DownloadEndpoint.class);
     use(UploadEndpoint.class);
 

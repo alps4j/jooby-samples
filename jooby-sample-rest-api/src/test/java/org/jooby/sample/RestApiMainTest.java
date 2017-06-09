@@ -42,9 +42,8 @@ public class RestApiMainTest {
   @Test
   public void scriptPost() {
     given()
-      .queryParams(
-        "firstName", "Obi-Wan",
-        "lastName", "Kenobi")
+      .queryParam("firstName", "Obi-Wan")
+      .queryParam("lastName", "Kenobi")
       .post(SCRIPT_PATH)
       .then()
       .assertThat()
